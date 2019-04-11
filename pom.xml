@@ -33,18 +33,35 @@
 
     <name>Java XML registry Reference Implementation</name>
     <description>JAXR enables Java software programmers to use a single, easy-to-use abstraction API to access a variety of XML registries. A unified JAXR information model describes content and metadata within XML registries.</description>
-    <!--<url></url>
 
+    <url>https://github.com/eclipse-ee4j/jaxr-ri</url>
     <scm>
-        <connection></connection>
-        <developerConnection></developerConnection>
-        <url></url>
-    </scm>-->
+        <connection>scm:git:ssh://git@github.com/eclipse-ee4j/jaxr-ri</connection>
+        <developerConnection>scm:git:ssh://git@github.com/eclipse-ee4j/jaxr-ri.git</developerConnection>
+        <url>https://github.com/eclipse-ee4j/jaxr-ri.git</url>
+        <tag>HEAD</tag>
+    </scm>
+
+    <licenses>
+        <license>
+            <name>Eclipse Distribution License - v 1.0</name>
+            <url>http://www.eclipse.org/org/documents/edl-v10.php</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <name>Roman Grigoriadi</name>
+            <email>roman.grigoriadi@oracle.com</email>
+            <organization>Oracle Corporation</organization>
+        </developer>
+    </developers>
 
     <properties>
-        <jaxr-api.version>1.0_04</jaxr-api.version>
-        <soap.api.version>1.4.0</soap.api.version>
-        <jaxb-api.version>2.3.1</jaxb-api.version>
+        <jaxr-api.version>1.0.9</jaxr-api.version>
+        <soap.api.version>1.4.1</soap.api.version>
+        <jaxb-api.version>2.3.2</jaxb-api.version>
 
         <legal.doc.source>${project.basedir}</legal.doc.source>
 
@@ -53,18 +70,18 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>javax.xml</groupId>
-                <artifactId>jaxr-api</artifactId>
+                <groupId>jakarta.xml.registry</groupId>
+                <artifactId>jakarta.xml.registry-api</artifactId>
                 <version>${jaxr-api.version}</version>
             </dependency>
             <dependency>
-                <groupId>javax.xml.soap</groupId>
-                <artifactId>javax.xml.soap-api</artifactId>
+                <groupId>jakarta.xml.soap</groupId>
+                <artifactId>jakarta.xml.soap-api</artifactId>
                 <version>${soap.api.version}</version>
             </dependency>
             <dependency>
-                <groupId>javax.xml.bind</groupId>
-                <artifactId>jaxb-api</artifactId>
+                <groupId>jakarta.xml.bind</groupId>
+                <artifactId>jakarta.xml.bind-api</artifactId>
                 <version>${jaxb-api.version}</version>
             </dependency>
         </dependencies>
@@ -72,16 +89,16 @@
 
     <dependencies>
         <dependency>
-            <groupId>javax.xml</groupId>
-            <artifactId>jaxr-api</artifactId>
+            <groupId>jakarta.xml.registry</groupId>
+            <artifactId>jakarta.xml.registry-api</artifactId>
         </dependency>
         <dependency>
-            <groupId>javax.xml.soap</groupId>
-            <artifactId>javax.xml.soap-api</artifactId>
+            <groupId>jakarta.xml.soap</groupId>
+            <artifactId>jakarta.xml.soap-api</artifactId>
         </dependency>
         <dependency>
-            <groupId>javax.xml.bind</groupId>
-            <artifactId>jaxb-api</artifactId>
+            <groupId>jakarta.xml.bind</groupId>
+            <artifactId>jakarta.xml.bind-api</artifactId>
         </dependency>
     </dependencies>
 
@@ -190,6 +207,31 @@
                             <instructions>
                                 <_noee>true</_noee>
                             </instructions>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>build-helper-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>add-resource</id>
+                        <phase>generate-resources</phase>
+                        <goals>
+                            <goal>add-resource</goal>
+                        </goals>
+                        <configuration>
+                            <resources>
+                                <resource>
+                                    <directory>${project.basedir}</directory>
+                                    <targetPath>META-INF</targetPath>
+                                    <includes>
+                                        <include>LICENSE.md</include>
+                                        <include>NOTICE.md</include>
+                                    </includes>
+                                </resource>
+                            </resources>
                         </configuration>
                     </execution>
                 </executions>
