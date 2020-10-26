@@ -1,5 +1,6 @@
 /*
  * Copyright (c) 2007, 2019 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2020 Payara Services Ltd.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v. 2.0, which is available at
@@ -15,8 +16,6 @@
  */
 
 package com.sun.xml.registry.uddi;
-
-import javax.xml.registry.*;
 
 /**
  * Represents a single logical connection to a federation or group of

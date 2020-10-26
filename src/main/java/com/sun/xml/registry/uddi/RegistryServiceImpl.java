@@ -1,5 +1,6 @@
 /*
  * Copyright (c) 2007, 2019 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2020 Payara Services Ltd.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v. 2.0, which is available at
@@ -20,28 +21,16 @@ import javax.xml.registry.*;
 import javax.xml.registry.infomodel.*;
 
 import java.util.*;
-import java.io.*;
 import java.net.*;
-import java.security.Security;
 import java.security.AccessController;
 import java.security.PrivilegedAction;
-import javax.net.ssl.SSLSocketFactory;
-import javax.security.auth.*;
-import javax.security.auth.login.*;
-import javax.xml.parsers.*;
 import javax.xml.soap.*;
-import javax.xml.transform.*;
-import javax.xml.transform.dom.*;
-import javax.xml.transform.stream.*;
 
 import com.sun.xml.registry.common.util.*;
 
-import org.w3c.dom.Element;
-import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-import com.sun.xml.registry.common.util.*;
 
 import java.util.logging.Logger;
 import java.util.logging.Level;

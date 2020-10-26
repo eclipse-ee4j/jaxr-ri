@@ -1,5 +1,6 @@
 /*
  * Copyright (c) 2007, 2019 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2020 Payara Services Ltd.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v. 2.0, which is available at
@@ -29,7 +30,6 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.XmlValue;
-import com.sun.xml.registry.uddi.bindings_v2_2.Name;
 
 
 /**

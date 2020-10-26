@@ -1,5 +1,6 @@
 /*
  * Copyright (c) 2007, 2019 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2020 Payara Services Ltd.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v. 2.0, which is available at
@@ -18,13 +19,9 @@ package com.sun.xml.registry.uddi;
 
 import javax.xml.registry.*;
 import java.lang.reflect.*;
-import java.io.StringWriter;
 import java.util.*;
 
-import com.sun.xml.registry.uddi.*;
 import com.sun.xml.registry.common.BulkResponseImpl;
-import com.sun.xml.registry.uddi.*;
-import com.sun.xml.registry.common.util.XMLUtil;
 import com.sun.xml.registry.common.util.MarshallerUtil;
 
 import org.w3c.dom.*;
@@ -33,11 +30,9 @@ import javax.xml.bind.JAXBException;
 import javax.xml.soap.SOAPBody;
 import javax.xml.soap.SOAPMessage;
 
-import java.lang.*;
 import java.security.AccessController;
 import java.security.PrivilegedAction;
 import java.util.logging.Logger;
-import java.util.logging.Level;
 
 /**
  * 

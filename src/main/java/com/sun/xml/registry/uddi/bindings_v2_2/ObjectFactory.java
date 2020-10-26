@@ -1,5 +1,6 @@
 /*
  * Copyright (c) 2007, 2019 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2020 Payara Services Ltd.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v. 2.0, which is available at
@@ -28,90 +29,6 @@ import javax.xml.bind.JAXBElement;
 import javax.xml.bind.annotation.XmlElementDecl;
 import javax.xml.bind.annotation.XmlRegistry;
 import javax.xml.namespace.QName;
-import com.sun.xml.registry.uddi.bindings_v2_2.AccessPoint;
-import com.sun.xml.registry.uddi.bindings_v2_2.AddPublisherAssertions;
-import com.sun.xml.registry.uddi.bindings_v2_2.Address;
-import com.sun.xml.registry.uddi.bindings_v2_2.AddressLine;
-import com.sun.xml.registry.uddi.bindings_v2_2.AssertionStatusItem;
-import com.sun.xml.registry.uddi.bindings_v2_2.AssertionStatusReport;
-import com.sun.xml.registry.uddi.bindings_v2_2.AuthToken;
-import com.sun.xml.registry.uddi.bindings_v2_2.BindingDetail;
-import com.sun.xml.registry.uddi.bindings_v2_2.BindingTemplate;
-import com.sun.xml.registry.uddi.bindings_v2_2.BindingTemplates;
-import com.sun.xml.registry.uddi.bindings_v2_2.BusinessDetail;
-import com.sun.xml.registry.uddi.bindings_v2_2.BusinessDetailExt;
-import com.sun.xml.registry.uddi.bindings_v2_2.BusinessEntity;
-import com.sun.xml.registry.uddi.bindings_v2_2.BusinessEntityExt;
-import com.sun.xml.registry.uddi.bindings_v2_2.BusinessInfo;
-import com.sun.xml.registry.uddi.bindings_v2_2.BusinessInfos;
-import com.sun.xml.registry.uddi.bindings_v2_2.BusinessList;
-import com.sun.xml.registry.uddi.bindings_v2_2.BusinessService;
-import com.sun.xml.registry.uddi.bindings_v2_2.BusinessServices;
-import com.sun.xml.registry.uddi.bindings_v2_2.CategoryBag;
-import com.sun.xml.registry.uddi.bindings_v2_2.Contact;
-import com.sun.xml.registry.uddi.bindings_v2_2.Contacts;
-import com.sun.xml.registry.uddi.bindings_v2_2.DeleteBinding;
-import com.sun.xml.registry.uddi.bindings_v2_2.DeleteBusiness;
-import com.sun.xml.registry.uddi.bindings_v2_2.DeletePublisherAssertions;
-import com.sun.xml.registry.uddi.bindings_v2_2.DeleteService;
-import com.sun.xml.registry.uddi.bindings_v2_2.DeleteTModel;
-import com.sun.xml.registry.uddi.bindings_v2_2.Description;
-import com.sun.xml.registry.uddi.bindings_v2_2.DiscardAuthToken;
-import com.sun.xml.registry.uddi.bindings_v2_2.DiscoveryURL;
-import com.sun.xml.registry.uddi.bindings_v2_2.DiscoveryURLs;
-import com.sun.xml.registry.uddi.bindings_v2_2.DispositionReport;
-import com.sun.xml.registry.uddi.bindings_v2_2.Email;
-import com.sun.xml.registry.uddi.bindings_v2_2.ErrInfo;
-import com.sun.xml.registry.uddi.bindings_v2_2.FindBinding;
-import com.sun.xml.registry.uddi.bindings_v2_2.FindBusiness;
-import com.sun.xml.registry.uddi.bindings_v2_2.FindQualifiers;
-import com.sun.xml.registry.uddi.bindings_v2_2.FindRelatedBusinesses;
-import com.sun.xml.registry.uddi.bindings_v2_2.FindService;
-import com.sun.xml.registry.uddi.bindings_v2_2.FindTModel;
-import com.sun.xml.registry.uddi.bindings_v2_2.GetAssertionStatusReport;
-import com.sun.xml.registry.uddi.bindings_v2_2.GetAuthToken;
-import com.sun.xml.registry.uddi.bindings_v2_2.GetBindingDetail;
-import com.sun.xml.registry.uddi.bindings_v2_2.GetBusinessDetail;
-import com.sun.xml.registry.uddi.bindings_v2_2.GetBusinessDetailExt;
-import com.sun.xml.registry.uddi.bindings_v2_2.GetPublisherAssertions;
-import com.sun.xml.registry.uddi.bindings_v2_2.GetRegisteredInfo;
-import com.sun.xml.registry.uddi.bindings_v2_2.GetServiceDetail;
-import com.sun.xml.registry.uddi.bindings_v2_2.GetTModelDetail;
-import com.sun.xml.registry.uddi.bindings_v2_2.HostingRedirector;
-import com.sun.xml.registry.uddi.bindings_v2_2.IdentifierBag;
-import com.sun.xml.registry.uddi.bindings_v2_2.InstanceDetails;
-import com.sun.xml.registry.uddi.bindings_v2_2.KeyedReference;
-import com.sun.xml.registry.uddi.bindings_v2_2.KeysOwned;
-import com.sun.xml.registry.uddi.bindings_v2_2.Name;
-import com.sun.xml.registry.uddi.bindings_v2_2.ObjectFactory;
-import com.sun.xml.registry.uddi.bindings_v2_2.OverviewDoc;
-import com.sun.xml.registry.uddi.bindings_v2_2.Phone;
-import com.sun.xml.registry.uddi.bindings_v2_2.PublisherAssertion;
-import com.sun.xml.registry.uddi.bindings_v2_2.PublisherAssertions;
-import com.sun.xml.registry.uddi.bindings_v2_2.RegisteredInfo;
-import com.sun.xml.registry.uddi.bindings_v2_2.RelatedBusinessInfo;
-import com.sun.xml.registry.uddi.bindings_v2_2.RelatedBusinessInfos;
-import com.sun.xml.registry.uddi.bindings_v2_2.RelatedBusinessesList;
-import com.sun.xml.registry.uddi.bindings_v2_2.Result;
-import com.sun.xml.registry.uddi.bindings_v2_2.SaveBinding;
-import com.sun.xml.registry.uddi.bindings_v2_2.SaveBusiness;
-import com.sun.xml.registry.uddi.bindings_v2_2.SaveService;
-import com.sun.xml.registry.uddi.bindings_v2_2.SaveTModel;
-import com.sun.xml.registry.uddi.bindings_v2_2.ServiceDetail;
-import com.sun.xml.registry.uddi.bindings_v2_2.ServiceInfo;
-import com.sun.xml.registry.uddi.bindings_v2_2.ServiceInfos;
-import com.sun.xml.registry.uddi.bindings_v2_2.ServiceList;
-import com.sun.xml.registry.uddi.bindings_v2_2.SetPublisherAssertions;
-import com.sun.xml.registry.uddi.bindings_v2_2.SharedRelationships;
-import com.sun.xml.registry.uddi.bindings_v2_2.TModel;
-import com.sun.xml.registry.uddi.bindings_v2_2.TModelBag;
-import com.sun.xml.registry.uddi.bindings_v2_2.TModelDetail;
-import com.sun.xml.registry.uddi.bindings_v2_2.TModelInfo;
-import com.sun.xml.registry.uddi.bindings_v2_2.TModelInfos;
-import com.sun.xml.registry.uddi.bindings_v2_2.TModelInstanceDetails;
-import com.sun.xml.registry.uddi.bindings_v2_2.TModelInstanceInfo;
-import com.sun.xml.registry.uddi.bindings_v2_2.TModelList;
-import com.sun.xml.registry.uddi.bindings_v2_2.ValidateValues;
 
 
 /**
