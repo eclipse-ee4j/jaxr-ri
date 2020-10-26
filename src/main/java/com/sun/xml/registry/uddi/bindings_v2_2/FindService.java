@@ -1,5 +1,6 @@
 /*
  * Copyright (c) 2007, 2019 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2020 Payara Services Ltd.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v. 2.0, which is available at
@@ -31,11 +32,6 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
-import com.sun.xml.registry.uddi.bindings_v2_2.CategoryBag;
-import com.sun.xml.registry.uddi.bindings_v2_2.FindQualifiers;
-import com.sun.xml.registry.uddi.bindings_v2_2.FindService;
-import com.sun.xml.registry.uddi.bindings_v2_2.Name;
-import com.sun.xml.registry.uddi.bindings_v2_2.TModelBag;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**

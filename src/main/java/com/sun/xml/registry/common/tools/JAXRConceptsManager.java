@@ -1,5 +1,6 @@
 /*
  * Copyright (c) 2007, 2019 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2020 Payara Services Ltd.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v. 2.0, which is available at
@@ -22,45 +23,25 @@ import javax.xml.registry.infomodel.*;
 import com.sun.xml.registry.uddi.*;
 import com.sun.xml.registry.uddi.infomodel.*;
 import com.sun.xml.registry.common.tools.bindings_v3.*;
-import com.sun.xml.registry.common.*;
-import com.sun.xml.registry.common.util.*;
 
 import java.io.*;
-import java.net.*;
 import java.util.*;
 
 import java.util.logging.Logger;
 import java.util.logging.Level;
 
-import com.sun.xml.registry.common.util.*;
-
-import java.io.File;
-import java.io.IOException;
-
-// JAXP packages
-import javax.xml.parsers.*;
-import java.util.Properties;
 
 import org.w3c.dom.*;
-import org.xml.sax.SAXException;
-import org.xml.sax.InputSource;
-
-import javax.xml.parsers.*;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
-import javax.xml.transform.*;
-import javax.xml.transform.dom.*;
-import javax.xml.transform.stream.*;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
 
 import java.security.AccessController;
 import java.security.PrivilegedAction;
-import java.security.PrivilegedExceptionAction;
-import java.security.PrivilegedActionException;
 
 
 //needs major rework

@@ -1,5 +1,6 @@
 /*
  * Copyright (c) 2007, 2019 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2020 Payara Services Ltd.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v. 2.0, which is available at
@@ -21,7 +22,6 @@ import javax.xml.registry.infomodel.*;
 import java.util.*;
 import com.sun.xml.registry.common.*;
 import com.sun.xml.registry.common.util.*;
-import com.sun.xml.registry.uddi.infomodel.*;
 
 /**
  * This is the interface exposed by the Registry Service that implements the business style query interface. It is also

@@ -1,5 +1,6 @@
 /*
  * Copyright (c) 2007, 2019 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2020 Payara Services Ltd.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v. 2.0, which is available at
@@ -17,20 +18,11 @@
 package com.sun.xml.registry.common.util;
 
 import java.util.*;
-import java.io.*;
 import javax.naming.*;
 import java.net.*;
-import javax.xml.registry.*;
-import javax.xml.registry.infomodel.*;
-import com.sun.xml.registry.uddi.*;
-
-import com.sun.xml.registry.common.*;
-import com.sun.xml.registry.uddi.infomodel.*;
-import javax.swing.*;
 
 
 import java.util.logging.Logger;
-import java.util.logging.Level;
 
 /**
  * Class Declaration.

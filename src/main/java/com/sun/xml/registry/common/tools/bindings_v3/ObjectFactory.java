@@ -1,5 +1,6 @@
 /*
  * Copyright (c) 2007, 2019 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2020 Payara Services Ltd.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v. 2.0, which is available at
@@ -25,13 +26,6 @@
 package com.sun.xml.registry.common.tools.bindings_v3;
 
 import javax.xml.bind.annotation.XmlRegistry;
-import com.sun.xml.registry.common.tools.bindings_v3.Command;
-import com.sun.xml.registry.common.tools.bindings_v3.JAXRClassificationScheme;
-import com.sun.xml.registry.common.tools.bindings_v3.JAXRConcept;
-import com.sun.xml.registry.common.tools.bindings_v3.Namepattern;
-import com.sun.xml.registry.common.tools.bindings_v3.ObjectFactory;
-import com.sun.xml.registry.common.tools.bindings_v3.PredefinedConcepts;
-import com.sun.xml.registry.common.tools.bindings_v3.Result;
 
 
 /**
