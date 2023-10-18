@@ -435,6 +435,14 @@ public class JAXRConceptsManager {
     DocumentBuilder createDocumentBuilder() {
         
         DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+
+        String FEATURE = "http://apache.org/xml/features/disallow-doctype-decl";
+        try {
+            dbf.setFeature(FEATURE, true);
+        } catch (ParserConfigurationException e) {
+            throw new IllegalStateException("ParserConfigurationException was thrown. The feature '"
+                + FEATURE + "' is not supported by your XML processor.", e);
+        }
         
         dbf.setNamespaceAware(false);
         dbf.setValidating(false);
